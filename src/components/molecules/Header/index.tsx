@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const Header = () => {
     return (
         <Container>
             <List>
-                <ListItem>Blog</ListItem>
-                <ListItem>Resume</ListItem>
+                <Link href={'/blog'} >
+                    <ListItem>Blog</ListItem>
+                </Link>
+                <Link href={'/resume'}>
+                    <ListItem>Resume</ListItem>
+                </Link>
             </List>
         </Container>
     )
@@ -19,7 +24,8 @@ const Container = styled.header`
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: antiquewhite;
+  background-color: cadetblue;
+  margin-bottom: 50px;
 `
 
 const List = styled.ul`
